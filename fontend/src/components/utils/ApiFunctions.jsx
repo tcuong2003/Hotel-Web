@@ -19,7 +19,7 @@ export async function addRoom(photo, roomType, roomPrice) {
     formData.append('roomType', roomType);
     formData.append('roomPrice', roomPrice);
 
-    const response = await api.post("/add/new-room", formData); //thêm dữ liệu formData vào DB
+    const response = await api.post("/rooms/add/new-room", formData)
     if (response.status === 201) { //mã trạng thái 201 là đã tạo DB
         return true;
     } else {

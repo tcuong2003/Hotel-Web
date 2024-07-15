@@ -20,6 +20,10 @@ const AddRoom = () => {
      const name = e.target.name
      let value = e.target.value
 
+     if (value == "Add New") {
+      value = "";
+     }
+
     //{...newRoom, [name]: value}: Cập nhật đối tượng newRoom bằng cách sao chép các thuộc tính hiện có của newRoom và cập nhật thuộc tính có tên là name với giá trị mới.
     //...newRoom: Sao chép tất cả các thuộc tính hiện có của newRoom.
     //[name]: value: Cập nhật thuộc tính có tên là name với giá trị mới.
@@ -113,7 +117,7 @@ const AddRoom = () => {
               <label htmlFor='roomPrice' className='form-label'> Room Price</label>
               {/* value hiện tại của input được liên kết với newRoom.roomPrice, đảm bảo rằng input sẽ hiển thị giá trị hiện tại của roomPrice trong state newRoom. */
               /* handleRoomInputChange cập nhật giá trị cho state newRoom*/}
-              <input className='form-control' required id="roomPrice" type='number' name='roomPrice' value={newRoom.roomPrice} onChange={handlePriceChange}/>
+              <input className='form-control' required id="roomPrice" type='number' name='roomPrice' value={newRoom.roomPrice } onChange={handlePriceChange}/>
             </div>
 
             <div className='mb-3'>
