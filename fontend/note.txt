@@ -1,0 +1,14 @@
+npm create vite@latest 
+(npm là trình quản lý gói (package manager) cho Node.js, create vite là một create command được sử dụng để tạo dự án mới, 
+khởi chạy một giao diện tương tác để giúp bạn thiết lập dự án với Vite, @latest đảm bảo rằng bạn đang sử dụng phiên bản mới nhất của gói create-vite)
+
+Project name: ... (tên project)
+
+chọn react > js
+cd 'name project' (thoát chỗ hiện tại quay lại tạo gói mới)
+
+npm install
+npm run dev
+
+- lỗi nhấn clearFilter làm refesh trang
+
