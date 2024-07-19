@@ -76,7 +76,4 @@ public class BookingController {
                 booking.getNumOfChildren(), booking.getTotalNumOfGuest(),
                 booking.getBookingConfirmationCode(), room);
     }
-
-
-
 }

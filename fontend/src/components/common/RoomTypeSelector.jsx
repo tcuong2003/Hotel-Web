@@ -10,9 +10,14 @@ const RoomTypeSelector = ({handleRoomInputChange, newRoom}) => {
     []: side effect chỉ nên chạy một lần sau lần render đầu tiên */
     useEffect(() => {
         getRoomTypes().then((data) => {
-            setRoomTypes(data)
-        }) 
-    }, [])
+            const sortedData = data.sort((a, b) => {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });
+            setRoomTypes(sortedData)
+        });
+    }, []);
 
     const handleNewRoomTypeInputChange = (e) => {
         setNewRoomType(e.target.value);

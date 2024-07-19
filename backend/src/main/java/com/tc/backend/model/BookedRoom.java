@@ -40,7 +40,6 @@ public class BookedRoom {
     @Column(name = "Total_Guest")
     private int totalNumOfGuest;
 
-    @Setter
     @Column(name = "Confirmation_Code")
     private String bookingConfirmationCode;
 
@@ -49,7 +48,7 @@ public class BookedRoom {
     @JoinColumn(name = "Room_Id")
     private Room room;
 
-    public void calculationTotalNumberOfGuest() {
+    public void calculateTotalNumberOfGuest() {
         this.totalNumOfGuest = this.numOfAdults + this.numOfChildren;
     }
 
@@ -57,12 +56,15 @@ public class BookedRoom {
     //khi nhập dữ liệu mới thì tự động set lại
     public void setNumOfAdults(int numOfAdults) {
         this.numOfAdults = numOfAdults;
-        calculationTotalNumberOfGuest();
+        calculateTotalNumberOfGuest();
     }
 
     public void setNumOfChildren(int numOfChildren) {
         this.numOfChildren = numOfChildren;
-        calculationTotalNumberOfGuest();
+        calculateTotalNumberOfGuest();
+    }
+    public void setBookingConfirmationCode(String bookingConfirmationCode) {
+        this.bookingConfirmationCode = bookingConfirmationCode;
     }
 
 }
