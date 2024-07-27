@@ -43,8 +43,7 @@ public class BookedRoom {
     @Column(name = "Confirmation_Code")
     private String bookingConfirmationCode;
 
-    @ManyToOne(fetch = FetchType.LAZY) //chỉ tải dữ liệu khi cần thiết, tiết kiệm bộ nhớ thực thi
-    //name = "Room_Id" đặt tên cho cột ngoại khoá, và nó sẽ trỏ đến cột Room_Id trong bảng BookedRoom. Điều này xác định rằng mỗi BookedRoom sẽ được liên kết với một Room thông qua cột Room_Id
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Room_Id")
     private Room room;
 
@@ -52,8 +51,6 @@ public class BookedRoom {
         this.totalNumOfGuest = this.numOfAdults + this.numOfChildren;
     }
 
-
-    //khi nhập dữ liệu mới thì tự động set lại
     public void setNumOfAdults(int numOfAdults) {
         this.numOfAdults = numOfAdults;
         calculateTotalNumberOfGuest();
@@ -63,8 +60,4 @@ public class BookedRoom {
         this.numOfChildren = numOfChildren;
         calculateTotalNumberOfGuest();
     }
-    public void setBookingConfirmationCode(String bookingConfirmationCode) {
-        this.bookingConfirmationCode = bookingConfirmationCode;
-    }
-
 }

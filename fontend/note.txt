@@ -12,3 +12,18 @@ npm run dev
 
 - lỗi nhấn clearFilter làm refesh trang
 
+
+
+//   const handleLogout = () => {
+  //     localStorage.removeItem("token");
+  //     localStorage.removeItem("userRole");
+
+  //     setIsLoggedIn(false);
+  //     setUserRole("");
+
+  //     navigate("/login"); // Điều hướng đến trang đăng nhập
+  //   };
+
+   // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [userRole, setUserRole] = useState("");
+  //   const navigate = useNavigate();
