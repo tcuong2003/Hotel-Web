@@ -11,4 +11,4 @@ public interface IUserRepository extends JpaRepository<User, Long> {
     void deleteByEmail(String email);
 
     Optional<User> findByEmail(String email);
-}
+} 

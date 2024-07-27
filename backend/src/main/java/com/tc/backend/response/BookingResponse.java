@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//Lớp BookingResponse này thường được sử dụng để truyền dữ liệu giữa các phương thức hoặc giữa các thành phần trong ứng dụng.
+
 public class BookingResponse {
     private Long id;
     private LocalDate checkInDate;

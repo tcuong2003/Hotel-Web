@@ -28,8 +28,8 @@ public class UserService implements IUserService {
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         System.out.println(user.getPassword());
-        Role userRole = iRoleRepository.findByName("ROLE_USER").get(); //tìm vai trò với tên là "ROLE_USER" và lấy ra
-        user.setRoles(Collections.singletonList(userRole)); //gán vai trò cho user và tạo danh sách chỉ chứa 1 phần tử
+        Role userRole = iRoleRepository.findByName("ROLE_USER").get();
+        user.setRoles(Collections.singletonList(userRole));
         return iUserRepository.save(user);
     }
 

@@ -16,8 +16,6 @@ public class RoomResponse {
     private String photo;
     private List<BookingResponse> bookings;
 
-    //lớp phản hồi dữ liệu entity
-    //DTO
     public RoomResponse(Long id, String roomType, BigDecimal roomPrice) {
         this.id = id;
         this.roomType = roomType;

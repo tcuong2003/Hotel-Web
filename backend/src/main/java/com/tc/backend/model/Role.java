@@ -20,8 +20,8 @@ public class Role {
     private Long id;
     private String name;
 
-    @JsonIgnore //ngăn chặn vòng lặp tuần tự hoá khi sử dụng JSON
-    @ManyToMany(mappedBy = "roles") //bị control relation, được ánh xạ bởi thuộc tính roles trong user
+    @JsonIgnore
+    @ManyToMany(mappedBy = "roles")
     private Collection<User> users = new HashSet<>();
 
     public Role(String name) {

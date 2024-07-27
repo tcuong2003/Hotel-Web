@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-//@CrossOrigin("http://localhost:5173")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/rooms")
@@ -36,7 +35,6 @@ public class RoomController {
     private final IBookingService iBookingService;
 
     @PostMapping("/add/new-room")
-    // RESful API trả dữ liệu kiểu phần thân và trạng thái
     public ResponseEntity<RoomResponse> addNewRoom (
             @RequestParam("photo") MultipartFile photo,
             @RequestParam("roomType") String roomType,
